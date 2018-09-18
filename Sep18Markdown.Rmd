@@ -1,5 +1,5 @@
 ---
-title: "Data Inport""
+title: "Data Import"
 output: html_document
 ---
 
@@ -7,3 +7,19 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+library(tidyverse)
+
+getwd()
+
+##Import CSV
+
+Import my first csv
+
+```{r}
+litters_data = read.csv(file = "./data/data/FAS_litters.csv")
+litters_data = janitor::clean_names(litters_data)
+pups_data = read.csv(file = "./data/data/FAS_pups.csv")
+pups_data = janitor::clean_names(pups_data)
+```
+
+Look at Data
